@@ -1,0 +1,29 @@
+plugins {
+    id 'kotlin'
+    id 'maven'
+}
+group = 'com.builder.plugin'
+version = '0.0.1'
+
+repositories {
+    google()
+    jcenter()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.20"
+    implementation gradleApi()
+    implementation "com.android.tools.build:gradle:4.1.1"
+    implementation 'commons-io:commons-io:2.7'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'cn.hutool:hutool-system:5.5.1'
+
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../plugin'))
+        }
+    }
+}
