@@ -53,7 +53,7 @@ class ConfigInitTask extends DefaultTask {
 
     private void addGitignore() {
         File gitIgnore = new File(projectPath + "/.gitignore");
-        String gitIgnoreStr = "\n\n\n#builder-plugin \n" +
+        String gitIgnoreStr = "\n\n\n#builder.sh-plugin \n" +
                 "/ChannelInfo";
         if (gitIgnore.exists() && !checkGitignore()) {
             try {

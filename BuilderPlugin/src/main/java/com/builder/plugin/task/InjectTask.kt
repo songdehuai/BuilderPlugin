@@ -1,15 +1,13 @@
 package com.builder.plugin.task
 
-import com.android.build.api.variant.BuildConfigField
 import com.android.build.gradle.AppExtension
-import com.android.builder.internal.BaseConfigImpl
 import com.android.builder.internal.ClassFieldImpl
-import com.android.builder.model.ClassField
 import com.builder.plugin.base.BaseTask
 
 open class InjectTask : BaseTask() {
 
     override fun action() {
+
         val android = project.extensions.getByType(AppExtension::class.java)
 
         val field = ClassFieldImpl("String", "BASE_URL", "hhhhhhhh")

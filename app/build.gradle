@@ -16,6 +16,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "URL", '"http://192.168.1.1"')
+        resValue("string", "app_name", "渠道1")
+        manifestPlaceholders([
+                APP_ID  : "id1",
+                APP_NAME: "渠道1"
+        ])
     }
 
     buildTypes {
@@ -32,14 +39,40 @@ android {
         jvmTarget = '1.8'
     }
 
-    flavorDimensions "nihao1"
+    flavorDimensions "channelTest1"
 
     productFlavors {
-        nihao1 {
-            buildConfigField "String", "BASE_URL", '"http://dev.member.pt-app-api.chuangshiqilin.cn/"'
+        channelTest1 {
+            buildConfigField("String", "URL", '"http://192.168.1.1"')
+            resValue("string", "app_name", "渠道1")
+            manifestPlaceholders([
+                    APP_ID  : "id1",
+                    APP_NAME: "渠道1"
+            ])
         }
-        nihao2 {
-            buildConfigField "String", "BASE_URL", '"http://dev.member.pt-app-api.chuangshiqilin.cn/"'
+        channelTest2 {
+            buildConfigField("String", "URL", '"http://192.168.1.2"')
+            resValue("string", "app_name", "渠道2")
+            manifestPlaceholders([
+                    APP_ID  : "id2",
+                    APP_NAME: "渠道2"
+            ])
+        }
+        channelTest3 {
+            buildConfigField("String", "URL", '"http://192.168.1.3"')
+            resValue("string", "app_name", "渠道3")
+            manifestPlaceholders([
+                    APP_ID  : "id3",
+                    APP_NAME: "渠道3"
+            ])
+        }
+        channelTest4 {
+            buildConfigField("String", "URL", '"http://192.168.1.4"')
+            resValue("string", "app_name", "渠道4")
+            manifestPlaceholders([
+                    APP_ID  : "id4",
+                    APP_NAME: "渠道4"
+            ])
         }
     }
 }

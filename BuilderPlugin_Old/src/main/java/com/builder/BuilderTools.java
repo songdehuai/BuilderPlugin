@@ -51,7 +51,7 @@ public class BuilderTools {
         } else {
             cleanFlag = "";
         }
-        String shFileName = BuilderConfig.TEMP_FILE + "builder.sh";
+        String shFileName = BuilderConfig.TEMP_FILE + "builder.sh.sh";
         String flavorLastStr = flavorName.substring(0, 1).toUpperCase();
         String name = flavorName.replaceFirst(flavorLastStr.toLowerCase(), flavorLastStr);
         File shFile = new File(shFileName);

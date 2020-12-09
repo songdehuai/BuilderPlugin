@@ -16,9 +16,9 @@ public class BuilderConfig {
 
     public final static String DEFAULT_CHARSET_NAME = "UTF-8";
 
-    public static final String GROUP_NAME = "builder";
+    public static final String GROUP_NAME = "builder.sh";
 
-    public static final String TEMP_FILE = ".builder/";
+    public static final String TEMP_FILE = ".builder.sh/";
 
     public static final String GRADLE_FILE_NAME = "/build.gradle";
 
