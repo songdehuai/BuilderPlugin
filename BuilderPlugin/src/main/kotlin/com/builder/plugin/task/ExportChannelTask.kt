@@ -4,6 +4,7 @@ import com.android.build.gradle.AppExtension
 import com.builder.plugin.base.BaseTask
 import com.builder.plugin.bean.Channel
 import com.builder.plugin.bean.ChannelFile
+import com.builder.plugin.config.BuilderConfig
 import com.builder.plugin.ext.getBuildConfigFields
 import com.builder.plugin.ext.getManifestPlaceholders
 import com.builder.plugin.ext.getResValues
@@ -25,7 +26,7 @@ open class ExportChannelTask : BaseTask() {
             channel.resValues?.addAll(it.resValues.getResValues())
             channel.manifestPlaceholders = arrayListOf()
             channel.manifestPlaceholders?.addAll(it.manifestPlaceholders.getManifestPlaceholders())
-            channel.save()
+            channel.save(BuilderConfig.getChannelFilePathByChannelName(project.rootDir, it.name))
         }
 
     }

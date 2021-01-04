@@ -11,12 +11,9 @@ import java.io.File
 class BuilderPlugin : Plugin<Project> {
 
     override fun apply(project: Project) {
-        val builderFile = project.rootDir.path.plus("/.builder")
         project.tasks.create("InjectTask", InjectTask::class.java).group = "builder"
         project.tasks.create("ConfigInitTask", ConfigInitTask::class.java).group = "builder"
         project.tasks.create("ExportChannelTask", ExportChannelTask::class.java).group = "builder"
-
-        BuilderConfig.channelFilePath = File(builderFile.plus("/channels"))
 
     }
 

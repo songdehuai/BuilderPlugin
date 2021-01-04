@@ -20,7 +20,6 @@ open class ConfigInitTask : BaseTask() {
         checkProjectConfig()
     }
 
-
     private fun checkProjectConfig() {
         if (!projectConfig.exists()) {
             projectConfig.createNewFile()

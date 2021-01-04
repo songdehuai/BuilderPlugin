@@ -15,10 +15,10 @@ data class Channel(
     var folder: File? = null,
     var files: List<ChannelFile?>? = null
 ) {
-    fun save() {
-        val file =
-            File(BuilderConfig.channelFilePath.absolutePath.plus("/${name}").plus("/config.json"))
-        FileUtils.write(file, this.toJson(), BuilderConfig.CHARESET)
+    fun save(file: File, force: Boolean = true) {
+        if (force) {
+            FileUtils.write(file, this.toJson(), BuilderConfig.CHARESET)
+        }
     }
 }
 
