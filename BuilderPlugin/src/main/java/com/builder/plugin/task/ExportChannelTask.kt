@@ -21,8 +21,10 @@ open class ExportChannelTask : BaseTask() {
             channel.name = it.name
             channel.buildConfigFields = arrayListOf()
             channel.buildConfigFields?.addAll(it.buildConfigFields.getBuildConfigFields())
-            channel.resValues?.addAll(it.buildConfigFields.getResValues())
-            channel.manifestPlaceholders?.addAll(it.buildConfigFields.getManifestPlaceholders())
+            channel.resValues = arrayListOf()
+            channel.resValues?.addAll(it.resValues.getResValues())
+            channel.manifestPlaceholders = arrayListOf()
+            channel.manifestPlaceholders?.addAll(it.manifestPlaceholders.getManifestPlaceholders())
             channel.save()
         }
 

@@ -74,11 +74,26 @@ android {
                     APP_NAME: "渠道4"
             ])
         }
+
+        djw {
+            applicationId "com.qilincs.driver"
+            resValue "string", "app_name", "麒麟代驾(用户中心)"
+            resValue "string", "app_id", "5c80d5b2"
+            resValue "string", "technical_support", "@ 长春创世麒麟科技有限公司技术支持"
+            buildConfigField "String", "DISTRIBUTOR_ID", '"1"'
+            buildConfigField "String", "COMPANY", '"麒麟代驾"'
+            buildConfigField "String", "BASE_APP_ID", '"member_dev_qilinchuxing"'
+            buildConfigField "String", "BASE_URL", '"http://dev.member.app-api.chuangshiqilin.cn/"'
+            buildConfigField "String", "BASE_SYNC_URL", '"wss://ws-hw.cccsql.com"'
+            buildConfigField "String", "BUCKET", '"daijia-qilinkeji-hw"'
+            buildConfigField "String", "ENDPOINT", '"http://oss-cn-beijing.aliyuncs.com"'
+            manifestPlaceholders = [GEO_KEY_VALUE     : "97cc8177e66793430548c56d55e7bc46",
+                                    PACKAGE_NAME_VALUE: "com.qilincs.driver"]
+        }
     }
 }
 
 dependencies {
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
