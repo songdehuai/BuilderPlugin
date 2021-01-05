@@ -9,8 +9,6 @@ object BuilderConfig {
 
     const val TASK_FILE_NAME = "task.txt"
 
-    const val CHANNELS_NAME = "channels"
-
     const val CHANNEL_NAME = "channel.json"
 
     const val BUILDER_NAME = ".builder"
@@ -41,7 +39,7 @@ object BuilderConfig {
      * @return 渠道文件夹路径
      */
     fun getChannelFile(projectFile: File): File {
-        return "${getBuilderFile(projectFile)}/${CHANNELS_NAME}".toFile()
+        return getProjectConfig(getConfigFile(projectFile)).channelFilePath.toFile()
     }
 
     /**
@@ -50,7 +48,7 @@ object BuilderConfig {
      * @return 渠道文件夹路径
      */
     fun getChannelFileByName(projectFile: File, channelName: String): File {
-        return "${getBuilderFile(projectFile).absolutePath}/${CHANNELS_NAME}/${channelName}".toFile()
+        return "${getProjectConfig(getConfigFile(projectFile)).channelFilePath}/${channelName}".toFile()
     }
 
 

@@ -43,38 +43,38 @@ android {
     flavorDimensions "channelTest1"
 
     productFlavors {
-//        channelTest1 {
-//            buildConfigField("String", "URL", '"http://192.168.1.1"')
-//            resValue("string", "app_name", "渠道1")
-//            manifestPlaceholders([
-//                    APP_ID  : "id1",
-//                    APP_NAME: "渠道1"
-//            ])
-//        }
-//        channelTest2 {
-//            buildConfigField("String", "URL", '"http://192.168.1.2"')
-//            resValue("string", "app_name", "渠道2")
-//            manifestPlaceholders([
-//                    APP_ID  : "id2",
-//                    APP_NAME: "渠道2"
-//            ])
-//        }
-//        channelTest3 {
-//            buildConfigField("String", "URL", '"http://192.168.1.3"')
-//            resValue("string", "app_name", "渠道3")
-//            manifestPlaceholders([
-//                    APP_ID  : "id3",
-//                    APP_NAME: "渠道3"
-//            ])
-//        }
-//        channelTest4 {
-//            buildConfigField("String", "URL", '"http://192.168.1.4"')
-//            resValue("string", "app_name", "渠道4")
-//            manifestPlaceholders([
-//                    APP_ID  : "id4",
-//                    APP_NAME: "渠道4"
-//            ])
-//        }
+        channelTest1 {
+            buildConfigField("String", "URL", '"http://192.168.1.1"')
+            resValue("string", "app_name", "渠道1")
+            manifestPlaceholders([
+                    APP_ID  : "id1",
+                    APP_NAME: "渠道1"
+            ])
+        }
+        channelTest2 {
+            buildConfigField("String", "URL", '"http://192.168.1.2"')
+            resValue("string", "app_name", "渠道2")
+            manifestPlaceholders([
+                    APP_ID  : "id2",
+                    APP_NAME: "渠道2"
+            ])
+        }
+        channelTest3 {
+            buildConfigField("String", "URL", '"http://192.168.1.3"')
+            resValue("string", "app_name", "渠道3")
+            manifestPlaceholders([
+                    APP_ID  : "id3",
+                    APP_NAME: "渠道3"
+            ])
+        }
+        channelTest4 {
+            buildConfigField("String", "URL", '"http://192.168.1.4"')
+            resValue("string", "app_name", "渠道4")
+            manifestPlaceholders([
+                    APP_ID  : "id4",
+                    APP_NAME: "渠道4"
+            ])
+        }
 
 
     }

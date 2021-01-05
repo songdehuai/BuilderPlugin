@@ -17,6 +17,9 @@ data class ProjectConfig(
     var name: String = "",
     var version: String = "",
     var versionCode: String = "",
+    /**
+     * 绝对路径,因为要兼容channels文件夹不在项目内的情况
+     */
     var channelFilePath: String = "",
     var channelFiles: ArrayList<ChannelFile> = arrayListOf<ChannelFile>()
 )

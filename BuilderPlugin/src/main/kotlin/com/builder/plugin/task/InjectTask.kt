@@ -26,7 +26,7 @@ open class InjectTask : BaseTask() {
                 productFlavor.addResValues(channel.resValues.getResValues())
             }
         }
-
+        
         android.productFlavors.forEach {
             println("渠道信息${it.name}")
             it.buildConfigFields.forEach {
