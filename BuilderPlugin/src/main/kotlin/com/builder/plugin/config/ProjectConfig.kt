@@ -17,12 +17,13 @@ data class ProjectConfig(
     var name: String = "",
     var version: String = "",
     var versionCode: String = "",
+    var channelFilePath: String = "",
     var channelFiles: ArrayList<ChannelFile> = arrayListOf<ChannelFile>()
 )
 
 /**
  *  "projectFile": "/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
- *  "channelFile": "/mipmap-xxhdpi/ic_launcher.png"
+ *  "channelFile": "/ic_launcher.png"
  */
 data class ChannelFile(
     /**

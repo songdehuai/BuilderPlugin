@@ -1,5 +1,6 @@
 package com.builder.plugin.task
 
+import com.android.build.gradle.AppExtension
 import com.builder.plugin.base.BaseTask
 import com.builder.plugin.config.BuilderConfig
 import com.builder.plugin.config.emptyProjectConfig
@@ -17,7 +18,7 @@ open class ConfigInitTask : BaseTask() {
     private val taskFile by lazy { BuilderConfig.getTaskFile(project.rootDir) }
 
     override fun action() {
-        "项目路径:${project.buildFile.absolutePath}".log()
+        "项目路径:${project.rootDir}".log()
         checkConfigFolder()
         checkProjectConfig()
         checkTaskFile()
