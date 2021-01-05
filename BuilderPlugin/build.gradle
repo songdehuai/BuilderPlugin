@@ -26,3 +26,20 @@ uploadArchives {
         }
     }
 }
+
+
+task("task1") {
+    group = "TaskTest"
+    println("task1111")
+}
+
+task("task2") {
+    group = "TaskTest"
+    println("task2222")
+}
+
+
+project.assemble.doFirst {
+    println "assemble start"
+    tasks.task1.execute()
+}
