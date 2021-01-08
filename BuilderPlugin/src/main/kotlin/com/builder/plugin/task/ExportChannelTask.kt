@@ -7,6 +7,8 @@ import com.builder.plugin.config.BuilderConfig
 import com.builder.plugin.config.getProjectConfig
 import com.builder.plugin.ext.*
 import org.apache.commons.io.FileUtils
+import org.gradle.api.Project
+import org.gradle.api.invocation.Gradle
 
 open class ExportChannelTask : BaseTask() {
 

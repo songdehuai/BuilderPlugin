@@ -27,11 +27,9 @@ open class InjectTask : BaseTask() {
             }
         }
 
-
         android.productFlavors.forEach {
             println("渠道信息${it.name}")
         }
-
 
     }
 }
